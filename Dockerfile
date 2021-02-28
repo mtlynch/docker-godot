@@ -25,9 +25,13 @@ RUN wget "$GODOT_TEMPLATES_RELEASE" && \
       unzip "$GODOT_TEMPLATES_ZIP"
 
 FROM debian:stretch-slim
+
+ARG GODOT_VERSION="3.2.3"
 ARG GODOT_DIR="/godot"
 
 COPY --from=zip_downloader /godot/godot "${GODOT_DIR}/godot"
-COPY --from=zip_downloader /godot/templates "${GODOT_DIR}/templates"
+COPY --from=zip_downloader /godot/templates "/root/.local/share/godot/templates/${GODOT_VERSION}.stable"
+
+RUN find "/root/.local/share/godot/templates/${GODOT_VERSION}.stable"
 
 ENTRYPOINT ["/godot/godot"]
