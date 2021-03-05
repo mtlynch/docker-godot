@@ -18,7 +18,7 @@ jobs:
               --depth 1 \
               --branch 3.2-5bd2bbf \
               https://github.com/godotengine/godot-demo-projects.git
-      = run:
+      - run:
           name: create export presets
           command: |
             curl https://raw.githubusercontent.com/mtlynch/godot-ci-scratch/4e6d1c72e2ee18da295ee5440524b25c010e9cba/export_presets.cfg \
