@@ -24,7 +24,7 @@ RUN wget --no-verbose "$GODOT_RELEASE" && \
 RUN wget --no-verbose "$GODOT_TEMPLATES_RELEASE" && \
       unzip "$GODOT_TEMPLATES_ZIP"
 
-FROM debian:stretch-slim
+FROM debian:stretch-20210208-slim
 
 ARG GODOT_VERSION="3.2.3"
 
