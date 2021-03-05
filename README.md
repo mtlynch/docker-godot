@@ -1,6 +1,6 @@
 # docker-godot
 
-[![CircleCI](https://circleci.com/gh/mtlynch/docker-godot.svg?style=svg)](https://circleci.com/gh/mtlynch/godot) [![Docker Pulls](https://img.shields.io/docker/pulls/mtlynch/docker-godot.svg?maxAge=604800)](https://hub.docker.com/r/mtlynch/godot/) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](LICENSE)
+[![CircleCI](https://circleci.com/gh/mtlynch/docker-godot.svg?style=svg)](https://circleci.com/gh/mtlynch/docker-godot) [![Docker Pulls](https://img.shields.io/docker/pulls/mtlynch/docker-godot.svg?maxAge=604800)](https://hub.docker.com/r/mtlynch/docker-godot/) [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](LICENSE)
 
 ## Overview
 
