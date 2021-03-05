@@ -17,11 +17,11 @@ RUN apt-get install -y \
 RUN mkdir "$GODOT_DIR"
 WORKDIR "$GODOT_DIR"
 
-RUN wget "$GODOT_RELEASE" && \
+RUN wget --no-verbose "$GODOT_RELEASE" && \
       unzip "$GODOT_ZIP" && \
       mv "${GODOT_BINARY}" ./godot
 
-RUN wget "$GODOT_TEMPLATES_RELEASE" && \
+RUN wget --no-verbose "$GODOT_TEMPLATES_RELEASE" && \
       unzip "$GODOT_TEMPLATES_ZIP"
 
 FROM debian:stretch-slim
