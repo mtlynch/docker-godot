@@ -12,11 +12,20 @@ jobs:
           name: Build dockerfile
           command: docker build -t "${IMAGE_NAME}" .
       - run:
-          name: Run a container
-          command: docker run --name "${CONTAINER_NAME}" "${IMAGE_NAME}"
+          name: Get godot demo projects
+          command: |
+            git clone \
+              --depth 1 \
+              --branch 3.2-5bd2bbf \
+              https://github.com/godotengine/godot-demo-projects.git
       - run:
-          name: Verify godot is available in the container
-          command: docker exec --tty "${CONTAINER_NAME}" --version
+          name: Export an app using the container
+          command: |
+            docker run \
+              --volume godot-demo-projects/2d/pong:/app
+              --name "${CONTAINER_NAME}" \
+              "${IMAGE_NAME}" \
+                --export HTML5 /app/project.godot /tmp/index.html
 workflows:
   version: 2
   all-tests:
