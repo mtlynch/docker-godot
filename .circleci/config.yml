@@ -13,10 +13,7 @@ jobs:
           command: docker build -t "${IMAGE_NAME}" .
       - run:
           name: Run a container
-          command: docker run --name "${CONTAINER_NAME}" "${IMAGE_NAME}"
-      - run:
-          name: Verify godot is available in the container
-          command: docker exec --tty "${CONTAINER_NAME}" --version
+          command: docker run --name "${CONTAINER_NAME}" "${IMAGE_NAME}" --version
 workflows:
   version: 2
   all-tests:
