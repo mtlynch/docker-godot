@@ -22,7 +22,7 @@ jobs:
           name: create export presets
           command: |
             curl https://raw.githubusercontent.com/mtlynch/godot-ci-scratch/4e6d1c72e2ee18da295ee5440524b25c010e9cba/export_presets.cfg \
-              -o 2d/pong/export_presets.cfg
+              -o godot-demo-projects/2d/pong/export_presets.cfg
       - run:
           name: Export an app using the container
           command: |
