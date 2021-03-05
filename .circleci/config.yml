@@ -22,7 +22,7 @@ jobs:
           name: Export an app using the container
           command: |
             docker run \
-              --volume godot-demo-projects/2d/pong:/app \
+              --volume "${PWD}/godot-demo-projects/2d/pong:/app" \
               --name "${CONTAINER_NAME}" \
               "${IMAGE_NAME}" \
                 --export HTML5 /app/project.godot /tmp/index.html
